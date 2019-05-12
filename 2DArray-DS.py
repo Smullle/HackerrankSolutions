@@ -11,7 +11,8 @@ def hourglassSum(arr):
     
     length = len(arr)
     sum = 0
-    maxSum = 0
+    # possible negative values in arr
+    maxSum = -999
     
     for i in range(length -2):
         for j in range(length -2):
