@@ -8,13 +8,20 @@ import sys
 
 # Complete the rotLeft function below.
 def rotLeft(a, d):
-    
+    # better efficiency
+    for i in range (d):
+        over = a.pop(0)
+        a.append(over)
+
+    '''
+    #uses too much memory
     for i in range (d):
         over = a[0]
         for i in range(len(a)-1):
             a[i] = a[i+1]
         a[len(a) -1] = over
-    
+    '''
+
     return a
 
 if __name__ == '__main__':
